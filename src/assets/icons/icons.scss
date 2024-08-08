@@ -1,0 +1,14 @@
+@mixin svg-icon($name) {
+  display: inline-block;
+  background: no-repeat center center;
+  background-size: contain;
+  width: 1em;
+  height: 1em;
+  background-image: url('/assets/icons/#{name}.svg');
+}
+
+.icon {
+  &-example {
+    @include svg-icon('example')
+  }
+}
