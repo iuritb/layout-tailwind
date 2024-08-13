@@ -1,11 +1,11 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-chat-messages',
-  templateUrl: './chat-messages.component.html',
-  styleUrl: './chat-messages.component.css'
+  selector: 'app-chat-starrating',
+  templateUrl: './chat-starrating.component.html',
+  styleUrl: './chat-starrating.component.css'
 })
-export class ChatMessagesComponent {
+export class ChatStarratingComponent {
   @Input() rating: number = 0;
   @Input() maxRating: number = 5;
   @Output() ratingChange: EventEmitter<number> = new EventEmitter<number>();
