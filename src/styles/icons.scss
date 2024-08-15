@@ -14,5 +14,8 @@
   &-gear {
     @include svg-icon('gear');
   }
+  &-star {
+    @include svg-icon('star');
+  }
   // Adicione mais ícones conforme necessário
 }
