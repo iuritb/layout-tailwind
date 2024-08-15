@@ -8,7 +8,7 @@ import { ChatMessagesComponent } from './components/ui/chat-messages/chat-messag
 import { ChatInputComponent } from './components/ui/chat-input/chat-input.component';
 import { NavbarComponent } from './components/layout/navbar/navbar.component';
 import { SidebarComponent } from './components/layout/sidebar/sidebar.component';
-import { StarRatingComponent } from './star-rating/star-rating.component';
+import { StarRatingComponent } from './components/ui/star-rating/star-rating.component';
 import { ChatStarratingComponent } from './components/ui/chat-starrating/chat-starrating.component';
 
 @NgModule({
