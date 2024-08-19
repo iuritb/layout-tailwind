@@ -30,6 +30,7 @@ import { ScssMainComponent } from './views/scss-main/scss-main.component';
 //Other components
 import { StarRatingComponent } from './components/ui/star-rating/star-rating.component';
 import { ChatStarratingComponent } from './components/ui/chat-starrating/chat-starrating.component';
+import { SidebarTailwindComponent } from './components/layout/sidebar-tailwind/sidebar-tailwind.component';
 
 
 
@@ -48,6 +49,7 @@ import { ChatStarratingComponent } from './components/ui/chat-starrating/chat-st
     ScssChatComponent,
     ScssInputComponent,
     ScssMainComponent,
+    SidebarTailwindComponent,
   ],
   imports: [
     BrowserModule,
