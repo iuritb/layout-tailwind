@@ -35,5 +35,8 @@
   &-arrow-up-circle {
     @include svg-icon('arrow-up-circle');
   }
+  &-side-menu {
+    @include svg-icon('side-menu');
+  }
   // Adicione mais ícones conforme necessário
 }

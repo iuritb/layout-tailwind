@@ -3,17 +3,10 @@
   [class.w-12]="!isExpanded"
   [class.w-64]="isExpanded"
 >
-  <div class="flex justify-center items-center p-4">
+  <div class="mt-4 ml-2 space-y-2">
     <button (click)="toggleSidebar()" class="text-white focus:outline-none">
       <i
-        *ngIf="isExpanded"
-        class="icon icon-arrow-left"
-        style="width: 24px; height: 24px; background-color: white"
-      >
-      </i>
-      <i
-        *ngIf="!isExpanded"
-        class="icon icon-arrow-right"
+        class="icon icon-side-menu"
         style="width: 24px; height: 24px; background-color: white"
       >
       </i>
