@@ -7,6 +7,13 @@
 
 @import 'icons';
 
+//palet colors
+// #262626
+// #404040
+// #595959
+// #737373
+// #BFBFBF
+
 //Global css reset
 * {
   margin: 0;
@@ -16,6 +23,7 @@
 }
 
 body {
-  height: 100vh;
-  background: linear-gradient(45deg, #828282, #c3c3c3);
+  background: linear-gradient(45deg, #595959, #BFBFBF);
 }
+
+

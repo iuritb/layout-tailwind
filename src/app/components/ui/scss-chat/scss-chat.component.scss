@@ -1,0 +1,29 @@
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__message {
+    display: flex;
+    flex-direction: column;
+
+    &--received {
+      align-self: flex-start;
+      background-color: #0F5959;
+      padding: 16px;
+      border-radius: 15px 15px 15px 0;
+      margin: 12px;
+      color: #BFBFBF;
+    }
+
+    &--sent {
+      align-self: flex-end;
+      background-color: #107361;
+      padding: 16px;
+      border-radius: 15px 15px 0 15px;
+      margin: 12px;
+      color: #BFBFBF;
+    }
+  }
+}

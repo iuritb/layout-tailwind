@@ -29,5 +29,11 @@
   &-history {
     @include svg-icon('history');
   }
+  &-stop-circle {
+    @include svg-icon('stop-circle');
+  }
+  &-arrow-up-circle {
+    @include svg-icon('arrow-up-circle');
+  }
   // Adicione mais ícones conforme necessário
 }

@@ -1,0 +1,45 @@
+.main{
+  display: flex;
+  flex-direction: row;
+  height: 92vh;
+  flex: 1;
+
+  &__chat{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__chat-text{
+    margin: 24px;
+    padding: 24px;
+    overflow-y: auto;
+  }
+  &__chat-input{
+    margin-bottom: 18px;
+  }
+}
+
+
+.custom-scrollbar {
+  overflow-y: auto; /* Habilita a rolagem vertical, se necessário */
+
+  &::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Cor de fundo do track */
+    border-radius: 10px; /* Bordas arredondadas */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #888; /* Cor do polegar */
+    border-radius: 12px; /* Bordas arredondadas */
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Cor do polegar ao passar o mouse */
+  }
+}

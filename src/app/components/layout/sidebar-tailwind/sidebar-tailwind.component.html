@@ -1,5 +1,5 @@
 <div
-  class="bg-teal-400 h-screen flex flex-col transition-width duration-300 ease-in-out"
+  class="bg-[#262626] h-[100%] flex flex-col transition-width duration-300 ease-in-out"
   [class.w-12]="!isExpanded"
   [class.w-64]="isExpanded"
 >
@@ -8,13 +8,13 @@
       <i
         *ngIf="isExpanded"
         class="icon icon-arrow-left"
-        style="width: 24px; height: 24px; background-color: black"
+        style="width: 24px; height: 24px; background-color: white"
       >
       </i>
       <i
         *ngIf="!isExpanded"
         class="icon icon-arrow-right"
-        style="width: 24px; height: 24px; background-color: black"
+        style="width: 24px; height: 24px; background-color: white"
       >
       </i>
     </button>
@@ -24,7 +24,7 @@
     <li class="flex items-center p-2 hover:bg-gray-700 rounded cursor-pointer">
       <i
         class="icon icon-base"
-        style="width: 24px; height: 24px; background-color: black"
+        style="width: 24px; height: 24px; background-color: white"
       >
       </i>
       <span class="ml-4 text-white" *ngIf="isExpanded"
@@ -34,13 +34,17 @@
     <li class="flex items-center p-2 hover:bg-gray-700 rounded cursor-pointer">
       <i
         class="icon icon-history"
-        style="width: 24px; height: 24px; background-color: black"
+        style="width: 24px; height: 24px; background-color: white"
       >
       </i>
       <span class="ml-4 text-white" *ngIf="isExpanded">Histórico de chats</span>
     </li>
     <li class="flex items-center p-2 hover:bg-gray-700 rounded cursor-pointer">
-      <i class="icon icon-gear" style="width: 24px; height: 24px"> </i>
+      <i
+        class="icon icon-gear"
+        style="width: 24px; height: 24px; background-color: white"
+      >
+      </i>
       <span class="ml-4 text-white" *ngIf="isExpanded"
         >Configurações de chat</span
       >
