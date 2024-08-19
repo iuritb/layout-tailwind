@@ -17,5 +17,17 @@
   &-star {
     @include svg-icon('star');
   }
+  &-arrow-left {
+    @include svg-icon('arrow-left');
+  }
+  &-arrow-right {
+    @include svg-icon('arrow-right');
+  }
+  &-base {
+    @include svg-icon('base');
+  }
+  &-history {
+    @include svg-icon('history');
+  }
   // Adicione mais ícones conforme necessário
 }
