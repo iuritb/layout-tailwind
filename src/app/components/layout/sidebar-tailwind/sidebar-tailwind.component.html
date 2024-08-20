@@ -3,19 +3,33 @@
   [class.w-12]="!isExpanded"
   [class.w-64]="isExpanded"
 >
-  <div class="mt-4 ml-2 space-y-2 tooltip">
-    <button
-      (click)="toggleSidebar()"
-      class="text-white focus:outline-none tooltip__trigger"
-    >
-      <i
-        class="icon icon-side-menu"
-        style="width: 24px; height: 24px; background-color: white"
+  <div class="mt-4 ml-2 space-y-2 sidebar__header tooltip">
+    <div>
+      <button
+        (click)="toggleSidebar()"
+        class="text-white focus:outline-none tooltip__trigger"
       >
-      </i>
-    </button>
-    <div  *ngIf="isExpanded" class="tooltip__content">Fechar Menu</div>
-    <div  *ngIf="!isExpanded" class="tooltip__content">Abrir Menu</div>
+        <i
+          class="icon icon-side-menu"
+          style="width: 24px; height: 24px; background-color: white"
+        >
+        </i>
+      </button>
+      <div *ngIf="isExpanded" class="tooltip__content">Fechar Menu</div>
+      <div *ngIf="!isExpanded" class="tooltip__content">Abrir Menu</div>
+    </div>
+    <div class="mr-4 pb-2" *ngIf="isExpanded">
+      <button
+        class="text-white focus:outline-none tooltip__trigger"
+      >
+        <i
+          class="icon icon-plus"
+          style="width: 24px; height: 24px; background-color: white"
+        >
+        </i>
+      </button>
+      <div class="tooltip__content">Novo Chat</div>
+    </div>
   </div>
 
   <hr class="m-6" />

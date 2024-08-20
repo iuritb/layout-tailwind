@@ -17,9 +17,9 @@
 
   &__content {
     position: absolute;
-    top: 5%;
+    top: 100%;
     left: 60%; /* Posiciona o tooltip à direita do elemento */
-    transform: translateY(-50%) translateX(120px); /* Centraliza verticalmente e ajusta à direita */
+    transform: translateY(-50%) translateX(60px); /* Centraliza verticalmente e ajusta à direita */
     background-color: #333;
     color: #fff;
     padding: 0.5rem;
@@ -43,4 +43,11 @@
       border-color: transparent transparent transparent #333; /* Cor da seta do tooltip */
     }
   }
+}
+
+.sidebar__header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
