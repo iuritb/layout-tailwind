@@ -1,0 +1,46 @@
+.tooltip {
+  position: relative;
+
+  &__trigger {
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    outline: none;
+
+    &:hover + .tooltip__content,
+    &:focus + .tooltip__content {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: 5%;
+    left: 60%; /* Posiciona o tooltip à direita do elemento */
+    transform: translateY(-50%) translateX(120px); /* Centraliza verticalmente e ajusta à direita */
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 10;
+
+    /* Setinha do tooltip */
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 100%; /* Posiciona a seta à esquerda do tooltip */
+      transform: translateY(-50%);
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent transparent transparent #333; /* Cor da seta do tooltip */
+    }
+  }
+}

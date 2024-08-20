@@ -3,11 +3,10 @@
   [class.w-12]="!isExpanded"
   [class.w-64]="isExpanded"
 >
-  <div class="mt-4 ml-2 space-y-2">
+  <div class="mt-4 ml-2 space-y-2 tooltip">
     <button
       (click)="toggleSidebar()"
-      class="text-white focus:outline-none"
-
+      class="text-white focus:outline-none tooltip__trigger"
     >
       <i
         class="icon icon-side-menu"
@@ -15,8 +14,9 @@
       >
       </i>
     </button>
+    <div  *ngIf="isExpanded" class="tooltip__content">Fechar Menu</div>
+    <div  *ngIf="!isExpanded" class="tooltip__content">Abrir Menu</div>
   </div>
-
 
   <hr class="m-6" />
 
