@@ -38,5 +38,8 @@
   &-side-menu {
     @include svg-icon('side-menu');
   }
+  &-plus {
+    @include svg-icon('plus');
+  }
   // Adicione mais ícones conforme necessário
 }
