@@ -1,0 +1,13 @@
+<div class="w-full">
+  <div>
+    <textarea
+      (input)="updateContent($event)"
+      [value]="markdownContent"
+      placeholder="Digite sua mensagem aqui..."
+      rows="4"
+      cols="50"
+      class="w-full p-2 border rounded"
+    ></textarea>
+  </div>
+  <div [innerHTML]="getFormattedMarkdown() | async"></div>
+</div>
