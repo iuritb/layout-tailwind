@@ -1,0 +1,79 @@
+.chatbox-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 1rem;
+}
+
+.message.user {
+  text-align: left;
+  background-color: #bfdbfe; /* Ajuste para um tom de azul mais próximo */
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.message.bot {
+  text-align: left;
+  background-color: #e5e7eb;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.input-container {
+  display: flex;
+  padding: 0.5rem;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+}
+
+.input-container textarea {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  resize: none;
+}
+
+.input-container button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+}
+
+.input-container button:hover {
+  background-color: #0056b3;
+}
+
+pre code {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 10px;
+  display: block;
+  overflow-x: auto;
+}
+
+.copy-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #007bff;
+  font-size: 1rem;
+}
+
+.copy-button:hover {
+  color: #0056b3;
+}
