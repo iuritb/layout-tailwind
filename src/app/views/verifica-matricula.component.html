@@ -1,0 +1,38 @@
+<app-navbar></app-navbar>
+<div class="main-container">
+  <div class="container mx-auto p-4 max-w-md">
+    <h1 class="text-3xl font-bold text-center text-Zinc-900 m-6">Verificação da Matrícula</h1>
+    <form (submit)="checkMatricula(); $event.preventDefault()">
+      <div class="mb-4">
+        <label for="matricula" class="block text-gray-700">Matrícula <span class="text-gray-400">(somente 7 dígitos)</span></label>
+        <input
+          type="text"
+          id="matricula"
+          [(ngModel)]="matricula"
+          (input)="clearErrorMessage()"
+          name="matricula"
+          class="mt-1 p-2 w-full border rounded"
+          required
+          title="Deve iniciar com uma letra seguida por 6 números"
+          maxlength="7"
+        />
+      </div>
+      <div *ngIf="errorMessage" class="text-red-500">{{ errorMessage }}</div>
+      <div class="mt-4">
+        <button
+          type="submit"
+          class="w-full border border-blue-700 text-blue-900 py-2 rounded-lg hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+          Verificar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<div class="check-register">
+  <div class="check-register__card">
+
+  </div>
+</div>
