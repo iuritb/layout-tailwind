@@ -1,0 +1,42 @@
+<!-- src/app/components/chatbox-input/chatbox-input.component.html -->
+<div class="chatbox-container">
+  <div #messagesContainer class="messages">
+    <div
+      *ngFor="let message of messages"
+      class="p-2 my-1 rounded"
+      [ngClass]="
+        message.sender === 'user'
+          ? 'message user'
+          : 'message bot'
+      "
+    >
+      <div *ngFor="let segment of message.text | codeMarkdown">
+        <div *ngIf="segment.type === 'code'" class="relative">
+          <pre><code [highlight]="segment.content" [language]="getLanguage(segment.content)"></code></pre>
+          <fa-icon
+            [icon]="faCopy"
+            (click)="copyToClipboard(segment.content)"
+            class="absolute top-0 right-0 m-2 cursor-pointer text-gray-500 hover:text-gray-700"
+          ></fa-icon>
+        </div>
+        <div *ngIf="segment.type === 'markdown'">
+          <markdown [data]="segment.content"></markdown>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="input-container">
+    <textarea
+      [(ngModel)]="userInput"
+      placeholder="Digite sua mensagem..."
+      class="flex-1 p-2 border border-gray-300 rounded-l"
+      (keyup.enter)="sendMessage()"
+    ></textarea>
+    <button
+      (click)="sendMessage()"
+      class="p-2 bg-blue-500 text-white rounded-r hover:bg-blue-600"
+    >
+      <i [ngClass]="isSendingMessage ? 'fas fa-square' : 'fas fa-arrow-up'"></i>
+    </button>
+  </div>
+</div>
