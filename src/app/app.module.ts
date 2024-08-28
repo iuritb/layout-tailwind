@@ -26,11 +26,15 @@ import { ScssInputComponent } from './components/ui/scss-input/scss-input.compon
 
 //Sass view components
 import { ScssMainComponent } from './views/scss-main/scss-main.component';
+import { LoginComponent } from './views/login/login.component';
+import { CriarSenhaComponent } from './views/criar-senha/criar-senha.component';
+import { VerificaMatriculaComponent } from './views/verifica-matricula/verifica-matricula.component';
 
 //Other components
 import { StarRatingComponent } from './components/ui/star-rating/star-rating.component';
 import { ChatStarratingComponent } from './components/ui/chat-starrating/chat-starrating.component';
 import { SidebarTailwindComponent } from './components/layout/sidebar-tailwind/sidebar-tailwind.component';
+
 
 
 
@@ -50,6 +54,9 @@ import { SidebarTailwindComponent } from './components/layout/sidebar-tailwind/s
     ScssInputComponent,
     ScssMainComponent,
     SidebarTailwindComponent,
+    LoginComponent,
+    CriarSenhaComponent,
+    VerificaMatriculaComponent,
   ],
   imports: [
     BrowserModule,
