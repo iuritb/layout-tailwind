@@ -23,6 +23,8 @@ import { ScssSidebarComponent } from './components/layout/scss-sidebar/scss-side
 //Sass Ui components
 import { ScssChatComponent } from './components/ui/scss-chat/scss-chat.component';
 import { ScssInputComponent } from './components/ui/scss-input/scss-input.component';
+import { ScssCardComponent } from './components/ui/scss-card/scss-card.component';
+
 
 //Sass view components
 import { ScssMainComponent } from './views/scss-main/scss-main.component';
@@ -34,6 +36,7 @@ import { VerificaMatriculaComponent } from './views/verifica-matricula/verifica-
 import { StarRatingComponent } from './components/ui/star-rating/star-rating.component';
 import { ChatStarratingComponent } from './components/ui/chat-starrating/chat-starrating.component';
 import { SidebarTailwindComponent } from './components/layout/sidebar-tailwind/sidebar-tailwind.component';
+import { ScssSelectKnowledgeBaseComponent } from './components/ui/scss-select-knowledge-base/scss-select-knowledge-base.component';
 
 
 
@@ -57,6 +60,8 @@ import { SidebarTailwindComponent } from './components/layout/sidebar-tailwind/s
     LoginComponent,
     CriarSenhaComponent,
     VerificaMatriculaComponent,
+    ScssCardComponent,
+    ScssSelectKnowledgeBaseComponent
   ],
   imports: [
     BrowserModule,
