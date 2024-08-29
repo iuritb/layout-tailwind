@@ -1,1 +1,61 @@
-<p>scss-dialog-chat-configuration works!</p>
+<button class="btn-configuracoes" (click)="showParams()">
+  <div>
+    Parâmetros
+  </div>
+</button>
+
+<div class="modal" [ngClass]="{ 'is-active': showParamsModal }">
+  <div class="modal-background" (click)="closeParamsModal()"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Parâmetros</p>
+      <button
+        class="delete"
+        aria-label="close"
+        (click)="closeParamsModal()"
+      ></button>
+    </header>
+    <section class="modal-card-body">
+      <!-- Sliders para os parâmetros -->
+      <div class="slider-container">
+        <div class="slider-header">
+          <label>Top N documentos</label>
+          <!-- <span>{{ azureParams.search_params.top_n_documents }}</span> -->
+        </div>
+        <input type="range" min="5" max="20" />
+      </div>
+      <div class="slider-container">
+        <div class="slider-header">
+          <label>Temperatura</label>
+          <!-- <span>{{ azureParams.llm_params.temperature }}</span> -->
+        </div>
+        <input type="range" min="0" max="1" step="0.1" />
+      </div>
+      <div class="slider-container">
+        <div class="slider-header">
+          <label>Máximo de tokens</label>
+          <!-- <span>{{ azureParams.llm_params.max_tokens }}</span> -->
+        </div>
+        <input type="range" min="256" max="4096" step="256" />
+      </div>
+      <div class="slider-container">
+        <div class="slider-header">
+          <label>Top P</label>
+          <!-- <span>{{ azureParams.llm_params.top_p }}</span> -->
+        </div>
+        <input type="range" min="0" max="1" step="0.1" />
+      </div>
+      <div class="slider-container">
+        <div class="slider-header">
+          <label>Penalidade de frequência</label>
+          <!-- <span>{{ azureParams.llm_params.frequency_penalty }}</span> -->
+        </div>
+        <input type="range" min="0" max="1" step="0.1" />
+      </div>
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button is-success" (click)="updateParams()">Salvar</button>
+      <button class="button" (click)="closeParamsModal()">Cancelar</button>
+    </footer>
+  </div>
+</div>

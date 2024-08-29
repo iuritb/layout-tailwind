@@ -1,0 +1,95 @@
+.params-btn {
+  background-color: #FF8C00; /* Cor laranja extraída do logo */
+}
+
+.params-btn:hover {
+  background-color: #FF7000; /* Cor mais escura ao passar o mouse */
+}
+
+/* Estilos para o modal */
+.modal.is-active {
+  display: flex; /* Use flex para centralizar */
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 10, 10, 0.86);
+  align-items: center;
+  justify-content: center;
+  z-index: 40;
+}
+
+.modal-card {
+  max-width: 500px;
+  width: 100%;
+  background: white;
+  border-radius: 6px;
+}
+
+.modal-card-head,
+.modal-card-foot {
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.modal-card-head {
+  border-bottom: none;
+}
+
+.modal-card-title {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.modal-card-body {
+  padding: 20px;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.modal-card-body .slider-container {
+  margin-bottom: 10px;
+}
+
+.modal-card-body .slider-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.modal-card-body label {
+  margin: 0;
+}
+
+.modal-card-body span {
+  margin-left: auto;
+}
+
+.modal-card-body input[type="range"] {
+  width: 100%;
+}
+
+.modal-card-foot .button {
+  margin-right: 10px;
+}
+
+.btn-configuracoes {
+  background-color: #f0f0f0;
+  border: none;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+.btn-configuracoes:hover {
+  background-color: #e0e0e0;
+}
