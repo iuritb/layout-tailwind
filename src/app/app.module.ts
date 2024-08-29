@@ -37,6 +37,7 @@ import { StarRatingComponent } from './components/ui/star-rating/star-rating.com
 import { ChatStarratingComponent } from './components/ui/chat-starrating/chat-starrating.component';
 import { SidebarTailwindComponent } from './components/layout/sidebar-tailwind/sidebar-tailwind.component';
 import { ScssSelectKnowledgeBaseComponent } from './components/ui/scss-select-knowledge-base/scss-select-knowledge-base.component';
+import { ScssDialogChatConfigurationComponent } from './components/ui/scss-dialog-chat-configuration/scss-dialog-chat-configuration.component';
 
 
 
@@ -61,7 +62,8 @@ import { ScssSelectKnowledgeBaseComponent } from './components/ui/scss-select-kn
     CriarSenhaComponent,
     VerificaMatriculaComponent,
     ScssCardComponent,
-    ScssSelectKnowledgeBaseComponent
+    ScssSelectKnowledgeBaseComponent,
+    ScssDialogChatConfigurationComponent
   ],
   imports: [
     BrowserModule,
