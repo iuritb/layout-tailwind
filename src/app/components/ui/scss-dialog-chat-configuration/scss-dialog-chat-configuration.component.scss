@@ -1,12 +1,5 @@
-.params-btn {
-  background-color: #FF8C00; /* Cor laranja extraída do logo */
-}
+@import "/src/styles/variables";
 
-.params-btn:hover {
-  background-color: #FF7000; /* Cor mais escura ao passar o mouse */
-}
-
-/* Estilos para o modal */
 .modal.is-active {
   display: flex; /* Use flex para centralizar */
 }
@@ -22,74 +15,67 @@
   align-items: center;
   justify-content: center;
   z-index: 40;
-}
+  color: $grayscale-110;
 
-.modal-card {
-  max-width: 500px;
-  width: 100%;
-  background: white;
-  border-radius: 6px;
-}
-
-.modal-card-head,
-.modal-card-foot {
-  padding: 20px;
-  border-bottom: 1px solid #ddd;
-}
-
-.modal-card-head {
-  border-bottom: none;
-}
-
-.modal-card-title {
-  margin: 0;
-  font-size: 1.5rem;
-}
-
-.modal-card-body {
-  padding: 20px;
-  max-height: 60vh;
-  overflow-y: auto;
-}
-
-.modal-card-body .slider-container {
-  margin-bottom: 10px;
-}
-
-.modal-card-body .slider-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 5px;
-}
-
-.modal-card-body label {
-  margin: 0;
-}
-
-.modal-card-body span {
-  margin-left: auto;
-}
-
-.modal-card-body input[type="range"] {
-  width: 100%;
-}
-
-.modal-card-foot .button {
-  margin-right: 10px;
-}
-
-.btn-configuracoes {
-  background-color: #f0f0f0;
-  border: none;
-  color: #333;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-}
-
-.btn-configuracoes:hover {
-  background-color: #e0e0e0;
+  &__content {
+    max-width: 500px;
+    width: 100%;
+    background-color: $grayscale-30;
+  }
+  &__header {
+    display: flex;
+    flex-direction: center;
+    justify-content: space-between;
+    align-items: center;
+    margin: 16px;
+  }
+  &__header-title {
+    font-weight: 700;
+    font-size: 20px;
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-height: 60vh; /* Definindo a altura máxima do corpo do cartão */
+    overflow-y: auto;
+  }
+  &__input-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 8px;
+  }
+  &__input-label{
+    font-size: 16px;
+    font-weight: 600;
+  }
+  &__input-range{
+    width: 25rem;
+  }
+  &__footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 16px;
+  }
+  &__button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    &--save {
+      border: 2px solid $primary-90;
+      color: $primary-90;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+    &--cancel {
+      border: 2px solid $secondary-90;
+      color: $secondary-90;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+  }
 }
