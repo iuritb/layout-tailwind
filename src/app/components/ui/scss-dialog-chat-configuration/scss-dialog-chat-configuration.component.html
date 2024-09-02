@@ -1,61 +1,73 @@
-<button class="btn-configuracoes" (click)="showParams()">
-  <div>
-    Parâmetros
-  </div>
+<button (click)="toggleDialogParams()">
+  <div>Parâmetros</div>
 </button>
 
 <div class="modal" [ngClass]="{ 'is-active': showParamsModal }">
-  <div class="modal-background" (click)="closeParamsModal()"></div>
-  <div class="modal-card">
-    <header class="modal-card-head">
-      <p class="modal-card-title">Parâmetros</p>
-      <button
-        class="delete"
-        aria-label="close"
-        (click)="closeParamsModal()"
-      ></button>
+  <div (click)="toggleDialogParams()"></div>
+  <div class="modal__content">
+    <header class="modal__header">
+      <p class="modal__header-title">Parâmetros</p>
+      <button (click)="toggleDialogParams()" class="modal__header-close">
+        <i
+          class="icon icon-x-circle"
+          style="width: 32px; height: 32px; background-color: black"
+        >
+        </i>
+      </button>
     </header>
-    <section class="modal-card-body">
-      <!-- Sliders para os parâmetros -->
-      <div class="slider-container">
-        <div class="slider-header">
-          <label>Top N documentos</label>
-          <!-- <span>{{ azureParams.search_params.top_n_documents }}</span> -->
+    <section >
+      <div class="modal__body">
+        <!-- Sliders para os parâmetros -->
+        <div class="modal__input-group">
+          <div class="modal__input-label">
+            <label class="modal__input-title">Top N documentos</label>
+            <span class="modal__input-params">{{ azureParams.search_params.top_n_documents }}</span>
+          </div>
+          <input class="modal__input-range" type="range" min="5" max="20" [(ngModel)]="azureParams.search_params.top_n_documents"/>
         </div>
-        <input type="range" min="5" max="20" />
-      </div>
-      <div class="slider-container">
-        <div class="slider-header">
-          <label>Temperatura</label>
-          <!-- <span>{{ azureParams.llm_params.temperature }}</span> -->
+        <div class="modal__input-group">
+          <div class="modal__input-label">
+            <label class="modal__input-title">Temperatura</label>
+            <span class="modal__input-params">{{ azureParams.llm_params.temperature }}</span>
+          </div>
+          <input class="modal__input-range" type="range" min="0" max="1" step="0.1" [(ngModel)]="azureParams.llm_params.temperature"/>
         </div>
-        <input type="range" min="0" max="1" step="0.1" />
-      </div>
-      <div class="slider-container">
-        <div class="slider-header">
-          <label>Máximo de tokens</label>
-          <!-- <span>{{ azureParams.llm_params.max_tokens }}</span> -->
+        <div class="modal__input-group">
+          <div class="modal__input-label">
+            <label class="modal__input-title">Máximo de tokens</label>
+            <span class="modal__input-params">{{ azureParams.llm_params.max_tokens }}</span>
+          </div>
+          <input class="modal__input-range" type="range" min="256" max="4096" step="256"  [(ngModel)]="azureParams.llm_params.max_tokens"/>
         </div>
-        <input type="range" min="256" max="4096" step="256" />
-      </div>
-      <div class="slider-container">
-        <div class="slider-header">
-          <label>Top P</label>
-          <!-- <span>{{ azureParams.llm_params.top_p }}</span> -->
+        <div class="modal__input-group">
+          <div class="modal__input-label">
+            <label class="modal__input-title">Top P</label>
+            <span class="modal__input-params">{{ azureParams.llm_params.top_p }}</span>
+          </div>
+          <input class="modal__input-range" type="range" min="0" max="1" step="0.1" [(ngModel)]="azureParams.llm_params.top_p"/>
         </div>
-        <input type="range" min="0" max="1" step="0.1" />
-      </div>
-      <div class="slider-container">
-        <div class="slider-header">
-          <label>Penalidade de frequência</label>
-          <!-- <span>{{ azureParams.llm_params.frequency_penalty }}</span> -->
+        <div class="modal__input-group">
+          <div class="modal__input-label">
+            <label class="modal__input-title">Penalidade de frequência</label>
+            <span class="modal__input-params">{{ azureParams.llm_params.frequency_penalty }}</span>
+          </div>
+          <input class="modal__input-range" type="range" min="0" max="1" step="0.1" [(ngModel)]="azureParams.llm_params.frequency_penalty"/>
         </div>
-        <input type="range" min="0" max="1" step="0.1" />
       </div>
     </section>
-    <footer class="modal-card-foot">
-      <button class="button is-success" (click)="updateParams()">Salvar</button>
-      <button class="button" (click)="closeParamsModal()">Cancelar</button>
+    <footer class="modal__footer">
+      <button
+        class="modal__button modal__button--cancel"
+        (click)="toggleDialogParams()"
+      >
+        Cancelar
+      </button>
+      <button
+        class="modal__button modal__button--save"
+        (click)="updateParams()"
+      >
+        Salvar
+      </button>
     </footer>
   </div>
 </div>
