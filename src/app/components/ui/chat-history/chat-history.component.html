@@ -1,1 +1,11 @@
-<p>chat-history works!</p>
+<div class="chat-history">
+  <h3 class="chat-history__title">Histórico de Conversas</h3>
+  <ul class="chat-history__list">
+    <li class="chat-history__item" *ngFor="let chat of chats">
+      <button class="chat-history__button" (click)="selectChat(chat)">
+        <span class="chat-history__name">{{ chat.name }}</span>
+        <span class="chat-history__timestamp">{{ chat.timestamp }}</span>
+      </button>
+    </li>
+  </ul>
+</div>
