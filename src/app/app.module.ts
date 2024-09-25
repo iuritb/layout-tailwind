@@ -39,6 +39,7 @@ import { SidebarTailwindComponent } from './components/layout/sidebar-tailwind/s
 import { ScssSelectKnowledgeBaseComponent } from './components/ui/scss-select-knowledge-base/scss-select-knowledge-base.component';
 import { ScssDialogChatConfigurationComponent } from './components/ui/scss-dialog-chat-configuration/scss-dialog-chat-configuration.component';
 import { ChatHistoryComponent } from './components/ui/chat-history/chat-history.component';
+import { ChatSkeletonComponent } from './chat-skeleton/chat-skeleton.component';
 
 
 
@@ -65,7 +66,8 @@ import { ChatHistoryComponent } from './components/ui/chat-history/chat-history.
     ScssCardComponent,
     ScssSelectKnowledgeBaseComponent,
     ScssDialogChatConfigurationComponent,
-    ChatHistoryComponent
+    ChatHistoryComponent,
+    ChatSkeletonComponent
   ],
   imports: [
     BrowserModule,
