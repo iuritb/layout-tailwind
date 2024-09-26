@@ -21,7 +21,7 @@ export class ChatbotMessagesComponent implements OnInit, OnDestroy, OnChanges {
   messages: any[] = []; // Armazena as mensagens do chat
   renderedMessages: RenderedMessage[] = []; // Armazena as mensagens renderizadas (com Markdown/LaTeX)
   private messagesSubscription!: Subscription; // Subscription para o Observable de mensagens
-  isLoading: boolean = true; // Controle de carregamento
+  isLoading: boolean = false; // Controle de carregamento, inicialmente false
 
   constructor(
     private chatService: ChatService,
@@ -40,7 +40,7 @@ export class ChatbotMessagesComponent implements OnInit, OnDestroy, OnChanges {
     // Se o chat foi alterado, carregue as mensagens
     if (changes['chat'] && this.chat) {
       console.log('Chat selecionado mudou, carregando mensagens...');
-      this.isLoading = true;  // Começa o carregamento
+      this.isLoading = true;  // Começa o carregamento quando o chat muda
       this.loadMessages(this.chat._id);
     }
   }
@@ -101,14 +101,17 @@ export class ChatbotMessagesComponent implements OnInit, OnDestroy, OnChanges {
     }, 0);
   }
 
-  // Função chamada quando o rating é alterado no componente de avaliação de estrelas
-  onRatingChange(messageId: string, rating: number): void {
-    this.chatService.rateMessage(messageId, { value: rating, messageType: 'assistant' }).subscribe({
-      next: (response) => {
-        console.log('Rating atualizado com sucesso', response);
+  // Função chamada ao enviar uma nova pergunta (simulando o envio de uma nova pergunta pelo usuário)
+  sendNewQuestion() {
+    this.isLoading = true;  // Definir carregamento ao enviar nova pergunta
+    this.chatService.sendMessage('nova pergunta').subscribe({
+      next: () => {
+        // Simular que a resposta chegou após a pergunta
+        this.loadMessages(this.chat!._id); // Recarregar mensagens após a resposta
       },
       error: (error) => {
-        console.error('Erro ao atualizar o rating:', error);
+        console.error('Erro ao enviar pergunta:', error);
+        this.isLoading = false;  // Em caso de erro, parar o carregamento
       }
     });
   }
