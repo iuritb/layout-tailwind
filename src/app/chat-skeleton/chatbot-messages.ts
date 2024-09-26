@@ -21,6 +21,7 @@ export class ChatbotMessagesComponent implements OnInit, OnDestroy, OnChanges {
   messages: any[] = []; // Armazena as mensagens do chat
   renderedMessages: RenderedMessage[] = []; // Armazena as mensagens renderizadas (com Markdown/LaTeX)
   private messagesSubscription!: Subscription; // Subscription para o Observable de mensagens
+  isLoading: boolean = true; // Controle de carregamento
 
   constructor(
     private chatService: ChatService,
@@ -39,6 +40,7 @@ export class ChatbotMessagesComponent implements OnInit, OnDestroy, OnChanges {
     // Se o chat foi alterado, carregue as mensagens
     if (changes['chat'] && this.chat) {
       console.log('Chat selecionado mudou, carregando mensagens...');
+      this.isLoading = true;  // Começa o carregamento
       this.loadMessages(this.chat._id);
     }
   }
@@ -57,10 +59,13 @@ export class ChatbotMessagesComponent implements OnInit, OnDestroy, OnChanges {
       // As mensagens serão automaticamente atualizadas através do BehaviorSubject (messages$)
     } catch (error) {
       console.error('Erro ao carregar mensagens:', error);
+    } finally {
+      this.isLoading = false;  // Fim do carregamento
     }
   }
 
   async renderMessages() {
+    this.isLoading = true; // Define como carregando enquanto renderiza
     this.renderedMessages = [];
     for (const message of this.messages) {
       const renderedMessage: RenderedMessage = {
@@ -81,6 +86,7 @@ export class ChatbotMessagesComponent implements OnInit, OnDestroy, OnChanges {
       this.renderedMessages.push(renderedMessage); // Adiciona o objeto ao array
     }
     this.reRenderMathJax();  // Re-renderiza fórmulas matemáticas, se houver
+    this.isLoading = false; // Finaliza o carregamento após renderizar as mensagens
   }
 
   reRenderMathJax() {
