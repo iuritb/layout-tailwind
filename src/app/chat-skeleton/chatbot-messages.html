@@ -1,5 +1,5 @@
 <div class="chat-container">
-  <template *ngIf="!isloading">
+  <ng-container *ngIf="!isLoading; else loadingTemplate">
     <div
       class="chat-container__message"
       *ngFor="let message of renderedMessages"
@@ -23,9 +23,12 @@
       >
       </app-chatbot-starrating>
     </div>
-  </template>
+  </ng-container>
 
-  <div *ngIf="isloading">
+  <!-- Template para o Skeleton Loading -->
+  <ng-template #loadingTemplate>
     <app-chat-skeleton></app-chat-skeleton>
-  </div>
+    <app-chat-skeleton></app-chat-skeleton>
+    <app-chat-skeleton></app-chat-skeleton>
+  </ng-template>
 </div>
