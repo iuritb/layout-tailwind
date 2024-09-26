@@ -1,0 +1,31 @@
+<div class="chat-container">
+  <template *ngIf="!isloading">
+    <div
+      class="chat-container__message"
+      *ngFor="let message of renderedMessages"
+    >
+      <!-- Mensagens enviadas pelo usuário -->
+      <p class="chat-container__message--sent">
+        <span [innerHTML]="message.user_message" class="prose"></span>
+      </p>
+
+      <!-- Mensagens recebidas do assistente -->
+      <p class="chat-container__message--received">
+        <span [innerHTML]="message.assistant_message" class="prose"></span>
+      </p>
+
+      <!-- Componente de avaliação de estrelas associado à assistant_message -->
+      <app-chatbot-starrating
+        *ngIf="message.assistant_message"
+        [messageId]="message.messageId"
+        [rating]="message.rating"
+        (ratingChange)="onRatingChange(message.messageId, $event)"
+      >
+      </app-chatbot-starrating>
+    </div>
+  </template>
+
+  <div *ngIf="isloading">
+    <app-chat-skeleton></app-chat-skeleton>
+  </div>
+</div>
