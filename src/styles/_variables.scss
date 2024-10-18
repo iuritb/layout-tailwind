@@ -1,0 +1,123 @@
+// Paleta Fixa:
+// Primary colors
+$primary-130: #002a4d;
+$primary-110: #00437a;
+$primary-90: #005ca9; //O tom original é o Primary 90.
+$primary-70: #2d8ad8;
+$primary-50: #6dbafa;
+$primary-30: #a0d2fc;
+$primary-10: #e5f1fc;
+// Secondary colors
+$secondary-130: #663a00;
+$secondary-110: #a65e00;
+$secondary-90: #d87b00;
+$secondary-70: #f39200; //O tom original é o Secondary 70.
+$secondary-50: #fdb548;
+$secondary-30: #ffd392;
+$secondary-10: #ffefd6;
+// Tertiary colors
+$tertiary-130: #03453b;
+$tertiary-110: #216e62;
+$tertiary-90: #359485;
+$tertiary-70: #54bbab; //O tom original é o Tertiary 70.
+$tertiary-50: #81d6c8;
+$tertiary-30: #b9ebe3;
+$tertiary-10: #e4f7f4;
+// Grayscale colors
+$grayscale-130: #22292e;
+$grayscale-110: #404b52;
+$grayscale-90: #647a7a;
+$grayscale-70: #9eb2b8;
+$grayscale-50: #d0e0e3; //O tom original é o Grayscale 50.
+$grayscale-30: #ebf1f2;
+$grayscale-10: #f7fafa;
+
+// Paleta flexível:
+// Ceu colors
+$ceu-130: #003c4d;
+$ceu-110: #006480;
+$ceu-90: #008cb2;
+$ceu-70: #00b4e6; //O tom original é o Ceu 70.
+$ceu-50: #2ec8f3;
+$ceu-30: #6edbfa;
+$ceu-10: #d0f5ff;
+// Uva colors
+$uva-130: #4f213f;
+$uva-110: #753c61;
+$uva-90: #93537d;
+$uva-70: #b26f9b; //O tom original é o Uva 70.
+$uva-50: #ce97bb;
+$uva-30: #eac9de;
+$uva-10: #fbeaf3;
+// Limao colors
+$limao-130: #465200;
+$limao-110: #6d8000;
+$limao-90: #99b103;
+$limao-70: #afca0b; //O tom original é o Limão 70.
+$limao-50: #c5de31;
+$limao-30: #def06d;
+$limao-10: #f5fec1;
+// Tangerina
+$tangerina-130: #664800;
+$tangerina-110: #996c00;
+$tangerina-90: #d19400;
+$tangerina-70: #f9b000; //O tom original é o Tangerina 70.
+$tangerina-50: #fac546;
+$tangerina-30: #fcdd92;
+$tangerina-10: #fff3d6;
+// Goiaba
+$goiaba-130: #801905;
+$goiaba-110: #b23820;
+$goiaba-90: #d8583f;
+$goiaba-70: #ef765e; //O tom original é o Goiaba 70.
+$goiaba-50: #f79481;
+$goiaba-30: #fcbdb0;
+$goiaba-10: #ffeae5;
+
+// Patela de Feedback:
+// Positive
+$positive-130: #093a14;
+$positive-110: #0d581c;
+$positive-90: #127527;
+$positive-70: #179231;
+$positive-50: #5cb26e;
+$positive-30: #a2d3ad;
+$positive-10: #e7faea;
+// Attention
+$attention-130: #661a1a;
+$attention-110: #8c2323;
+$attention-90: #b22c2c;
+$attention-70: #d93636;
+$attention-50: #e47272;
+$attention-30: #f0afaf;
+$attention-10: #fbebeb;
+// Negative
+$negative-130: #654c02;
+$negative-110: #977203;
+$negative-90: #ca9804;
+$negative-70: #fcbe05;
+$negative-50: #fdd150;
+$negative-30: #fee59b;
+$negative-10: #fff9e6;
+// Informative
+$informative-130: #02414c;
+$informative-110: #026173;
+$informative-90: #038299;
+$informative-70: #04a2bf;
+$informative-50: #4fbed2;
+$informative-30: #9bdae5;
+$informative-10: #e5f6f8;
+
+// Gradientes
+$gradient-oceano: linear-gradient(#005ca9 0%, #54bbab 100%);
+$gradient-gelo: linear-gradient(#fff 0%, #d0e0e3 100%);
+$gradient-ceu: linear-gradient(#005ca9 0%, #00b5e5 68%, #00b5e5 100%);
+$gradient-uva: linear-gradient(#005ca9 0%, #b26f9b 63%, #b26f9b 100%);
+$gradient-limao: linear-gradient(#005ca9 0%, #54bbab 60%, #afca0b 100%);
+$gradient-tangerina: linear-gradient(#005ca9 0%, #005ca9 23%, #54bbab 60%, #f9b000 90%, #f9b000 100%);
+$gradient-goiaba: linear-gradient(#005ca9 0%, #ef765e 63%, #ef765e 100%);
+$gradient-agua: linear-gradient(#54bbab 0%, #00b5e5 100%);
+$gradient-primavera: linear-gradient(#54bbab 0%, #b26f9b 100%);
+$gradient-inverno: linear-gradient(#54bbab 0%, #afca0b 100%);
+$gradient-verao: linear-gradient(#54bbab 0%, #f9b000 100%);
+$gradient-outono: linear-gradient(#54bbab 0%, #ef765e 100%);
